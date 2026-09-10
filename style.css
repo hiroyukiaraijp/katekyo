@@ -1,0 +1,210 @@
+:root {
+  --bg: #fbfbfa;
+  --panel: #ffffff;
+  --ink: #24292e;
+  --ink-soft: #5f6b73;
+  --ink-faint: #8d979e;
+  --accent: #2f4858;
+  --line: #dfe3e6;
+  --lead-bg: #f4f6f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17191b;
+    --panel: #1e2124;
+    --ink: #e7e9ea;
+    --ink-soft: #a8b1b7;
+    --ink-faint: #7c868c;
+    --accent: #9fc2d6;
+    --line: #33383c;
+    --lead-bg: #23272a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+h1, h2, .meta, .label, .badge, .conditions, .note, .back, th {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+}
+
+/* ヘッダー */
+.head {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.head h1 {
+  font-size: 1.5rem;
+  margin: 0 0 .5rem;
+  color: var(--accent);
+  letter-spacing: .04em;
+}
+.head .meta {
+  font-size: .8rem;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+}
+.badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: .7rem;
+  padding: .15rem .5rem;
+  border-radius: .25rem;
+  margin-right: .5rem;
+  letter-spacing: .08em;
+}
+
+/* リード文 */
+.lead {
+  background: var(--lead-bg);
+  border-left: 4px solid var(--ink-faint);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  font-size: .95rem;
+  line-height: 1.85;
+}
+.lead .caption {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .75rem;
+  color: var(--ink-soft);
+  margin-bottom: .5rem;
+  letter-spacing: .04em;
+}
+.source {
+  font-size: .75rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-top: .75rem;
+  word-break: break-all;
+}
+.source a { color: var(--accent); }
+
+/* 議題 */
+.question {
+  border: 2px solid var(--accent);
+  border-radius: .3rem;
+  background: var(--panel);
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.question .label {
+  font-size: .7rem;
+  color: var(--ink-soft);
+  letter-spacing: .12em;
+  margin-bottom: .5rem;
+}
+.question .text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  font-weight: 600;
+}
+
+/* 条件 */
+table.conditions {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+}
+table.conditions th, table.conditions td {
+  border: 1px solid var(--line);
+  padding: .55rem .8rem;
+  text-align: left;
+}
+table.conditions th {
+  background: var(--lead-bg);
+  color: var(--ink-soft);
+  font-weight: 600;
+  white-space: nowrap;
+  width: 32%;
+}
+
+/* 注意書き */
+.note {
+  font-size: .85rem;
+  color: var(--ink-soft);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  padding: .9rem 1rem;
+  line-height: 1.8;
+}
+.note ul { margin: 0; padding-left: 1.2rem; }
+.note li { margin-bottom: .2rem; }
+
+/* 一覧 */
+ul.issues { list-style: none; margin: 0; padding: 0; }
+ul.issues > li {
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  background: var(--panel);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+ul.issues .row1 {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .78rem;
+  color: var(--ink-soft);
+  letter-spacing: .02em;
+  margin-bottom: .4rem;
+}
+ul.issues .theme {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: .7rem;
+}
+ul.issues .links {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .85rem;
+}
+ul.issues .links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .1rem;
+  margin-right: 1.1rem;
+}
+ul.issues .links a:hover { border-bottom-color: var(--accent); }
+ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
+
+/* 戻り導線 */
+.back {
+  font-size: .85rem;
+  margin-bottom: 1.5rem;
+}
+.back a { color: var(--accent); text-decoration: none; }
+.back a:hover { text-decoration: underline; }
+
+.foot {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .75rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11.5pt; }
+  .wrap { max-width: none; padding: 0; }
+  .back { display: none; }
+}
