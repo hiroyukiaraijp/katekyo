@@ -208,3 +208,30 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
   .wrap { max-width: none; padding: 0; }
   .back { display: none; }
 }
+
+/* 執筆サンプルへの導線（議題の下） */
+.sample-link {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .9rem;
+  margin: -.5rem 0 1.5rem;
+}
+.sample-link a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .1rem;
+}
+.sample-link a:hover { border-bottom-color: var(--accent); }
+
+/* 執筆サンプルの本文 */
+.essay {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  padding: 1.4rem 1.5rem .6rem;
+}
+.essay p {
+  text-indent: 1em;
+  margin: 0 0 1.1em;
+  line-height: 2;
+}
