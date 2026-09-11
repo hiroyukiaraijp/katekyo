@@ -324,3 +324,6 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
   color: var(--ink-faint);
   white-space: nowrap;
 }
+
+/* 直した全文（朱の入った版） */
+.essay.revised { border-color: var(--pen); }
