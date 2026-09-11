@@ -327,3 +327,39 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
 
 /* 直した全文（朱の入った版） */
 .essay.revised { border-color: var(--pen); }
+
+/* 点数 */
+table.score {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .9rem;
+  margin: 0 0 .8rem;
+}
+table.score th, table.score td {
+  border: 1px solid var(--line);
+  padding: .5rem .8rem;
+  text-align: left;
+}
+table.score th {
+  background: var(--lead-bg);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: .8rem;
+}
+table.score td.num, table.score th:nth-child(n+2) { text-align: right; }
+table.score tr.total td {
+  background: var(--lead-bg);
+  font-weight: 700;
+}
+.band {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--panel);
+  border: 2px solid var(--accent);
+  border-radius: .3rem;
+  padding: .7rem 1rem;
+  margin-bottom: .6rem;
+}
+.band b { color: var(--accent); }
