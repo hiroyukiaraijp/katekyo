@@ -7,6 +7,7 @@
   --accent: #2f4858;
   --line: #dfe3e6;
   --lead-bg: #f4f6f7;
+  --pen: #b3412c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --accent: #9fc2d6;
     --line: #33383c;
     --lead-bg: #23272a;
+    --pen: #e08a72;
   }
 }
 
@@ -234,4 +236,39 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
   text-indent: 1em;
   margin: 0 0 1.1em;
   line-height: 2;
+}
+
+/* 講評（答案へのコメント） */
+.feedback h2 {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: .6rem;
+  margin: 2.2rem 0 .9rem;
+}
+.feedback h2:first-child { margin-top: 0; }
+.feedback h3 {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .92rem;
+  color: var(--ink-soft);
+  letter-spacing: .04em;
+  margin: 1.6rem 0 .5rem;
+}
+.feedback p { margin: 0 0 1em; }
+.feedback ul { margin: 0 0 1.2em; padding-left: 1.3rem; }
+.feedback li { margin-bottom: .5em; }
+.feedback blockquote {
+  margin: 0 0 .7em;
+  padding: .6rem .9rem;
+  background: var(--lead-bg);
+  border-left: 3px solid var(--ink-faint);
+  font-size: .95rem;
+  line-height: 1.8;
+}
+
+/* 朱 */
+.pen {
+  color: var(--pen);
+  font-weight: 600;
 }
