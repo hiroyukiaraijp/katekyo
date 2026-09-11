@@ -274,3 +274,12 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
   color: var(--pen);
   font-weight: 600;
 }
+
+/* 答案の上に置く小さな添え書き（字数など） */
+.meta-line {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .78rem;
+  color: var(--ink-soft);
+  margin: -.4rem 0 .6rem;
+  letter-spacing: .02em;
+}
