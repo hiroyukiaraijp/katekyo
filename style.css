@@ -283,3 +283,44 @@ ul.issues .links .pending { color: var(--ink-faint); margin-right: 1.1rem; }
   margin: -.4rem 0 .6rem;
   letter-spacing: .02em;
 }
+
+/* 出題紙の下に並べる回答 */
+.answers {
+  margin-top: 2.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+.answers h2 {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .8rem;
+  color: var(--ink-soft);
+  letter-spacing: .12em;
+  margin: 0 0 .8rem;
+}
+.answers ul { list-style: none; margin: 0; padding: 0; }
+.answers li {
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  background: var(--panel);
+  padding: .8rem 1rem;
+  margin-bottom: .6rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.answers a {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .98rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .1rem;
+}
+.answers a:hover { border-bottom-color: var(--accent); }
+.note-small {
+  font-family: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  font-size: .75rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
